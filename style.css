@@ -1,0 +1,61 @@
+
+    /* 1. Latar Belakang Transparan & Efek Kaca untuk Kartu KPI */
+    [data-testid="stMetric"] {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 4px solid #0078FF; /* Aksen biru modern di atas */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    
+    /* Efek Glowing (Bercahaya) saat di-hover */
+    [data-testid="stMetric"]:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 32px rgba(0, 120, 255, 0.2);
+        border-top: 4px solid #00E676; /* Berubah jadi hijau neon */
+    }
+
+    /* 2. Gradasi Warna pada Angka Metrik */
+    [data-testid="stMetricValue"] {
+        font-size: 38px !important;
+        font-weight: 900 !important;
+        background: -webkit-linear-gradient(45deg, #ffffff, #8da4d0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 5px;
+    }
+
+    /* 3. Penajaman Tipografi Judul */
+    h1 {
+        font-weight: 900 !important;
+        letter-spacing: -0.5px;
+        background: -webkit-linear-gradient(45deg, #ffffff, #0078FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    h3 {
+        font-weight: 700 !important;
+        letter-spacing: -0.5px;
+        color: #E2E8F0;
+    }
+
+    /* 4. Mempercantik Garis Pembatas dengan Gradien Neon */
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 120, 255, 0.5), rgba(0,0,0,0));
+    }
+
+    /* 5. Styling Wadah Tabel Dataframe */
+    [data-testid="stDataFrame"] {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
